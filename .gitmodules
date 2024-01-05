@@ -1,0 +1,6 @@
+[submodule "kindr_ros"]
+	path = kindr_ros
+	url = git@github.com:Tipriest/kindr_ros.git
+[submodule "message_logger"]
+	path = message_logger
+	url = git@github.com:Tipriest/message_logger.git
