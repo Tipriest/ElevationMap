@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(elevation_mapping_demos)
-
+set(CMAKE_BUILD_TYPE "Release")
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
   elevation_mapping
