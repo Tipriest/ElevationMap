@@ -1,4 +1,15 @@
 <launch>
+    <arg name="sim" default = "true"/>
+    
+    <!--如果不是仿真的话，会启动下面的节点启动T265相机和雷达  -->
+    <group if="!$(arg sim)">
+        <!-- 在if标签内部定义一个节点组 -->
+        <node name="node1" pkg="package_name" type="node1_type" if="!$(arg sim)" />
+    </group>
+
+
+
+
     <node pkg="elevation_mapping" type="elevation_mapping" name="elevation_mapping" output="screen">
         <rosparam command="load" file="$(find elevation_mapping_demos)/config/robots/elspider_air.yaml" />
         <rosparam command="load" file="$(find elevation_mapping_demos)/config/elevation_maps/simple_demo_map.yaml" />
