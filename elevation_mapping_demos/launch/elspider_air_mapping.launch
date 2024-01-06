@@ -1,0 +1,23 @@
+<launch>
+    <node pkg="elevation_mapping" type="elevation_mapping" name="elevation_mapping" output="screen">
+        <rosparam command="load" file="$(find elevation_mapping_demos)/config/robots/elspider_air.yaml" />
+        <rosparam command="load" file="$(find elevation_mapping_demos)/config/elevation_maps/simple_demo_map.yaml" />
+        <rosparam command="load" file="$(find elevation_mapping_demos)/config/postprocessing/postprocessor_pipeline.yaml" />
+    </node>
+
+    <!-- FIXME向里面传入坐标和odom的名字和offset啥的 -->
+    <node pkg="elevation_mapping" name="pose_link_pub_node" type="pose_link_pub" output="screen"/>
+    <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser2" args="0.14 0.0 0.0 0.0 0.0 0.0 /base_link /world 40" /> -->
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.14 0.0 0.0 0.0 0.0 0.0 /base_link /velodyneLidar 40" />
+
+    <!-- 在rviz中显示-->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find elevation_mapping_demos)/rviz/elspider_air_mapping.rviz" required="true" />
+
+    <!-- <node name="kinect_processing_Node" pkg="hitSpider" type="kinect_processing_Node" output="screen"/> -->
+
+    <!-- <node name="map_segmentation" pkg="hitSpider" type="map_segmentation" output="screen"/>
+    <node pkg="grid_map_visualization" type="grid_map_visualization" name="grid_map_visualization" output="screen">
+        <rosparam command="load" file="$(find hitSpider)/parameters/mapVisual.yaml" />
+    </node> -->
+
+</launch>

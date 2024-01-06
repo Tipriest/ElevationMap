@@ -108,6 +108,15 @@ target_link_libraries(${PROJECT_NAME}
   ${PROJECT_NAME}_library
 )
 
+add_executable(pose_link_pub
+  src/user_files/poseLinkPub.cpp
+)
+
+
+target_link_libraries(pose_link_pub
+  ${catkin_LIBRARIES}
+)
+
 #############
 ## Install ##
 #############
