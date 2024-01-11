@@ -6,7 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-      Splitter Ratio: 0.5
+        - /Axes1
+        - /Axes2
+      Splitter Ratio: 0.49572649598121643
     Tree Height: 515
   - Class: rviz/Selection
     Name: Selection
@@ -72,6 +74,24 @@ Visualization Manager:
       Unreliable: false
       Use Rainbow: true
       Value: true
+    - Alpha: 1
+      Class: rviz/Axes
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.10000000149011612
+      Reference Frame: base_link
+      Show Trail: false
+      Value: true
+    - Alpha: 1
+      Class: rviz/Axes
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.10000000149011612
+      Reference Frame: velodyneLidar
+      Show Trail: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -116,9 +136,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7903980016708374
+      Pitch: 1.3253976106643677
       Target Frame: <Fixed Frame>
-      Yaw: 0.7903980016708374
+      Yaw: 0.5503970384597778
     Saved: ~
 Window Geometry:
   Displays:
@@ -137,4 +157,4 @@ Window Geometry:
     collapsed: false
   Width: 1217
   X: 318
-  Y: 613
+  Y: 576
