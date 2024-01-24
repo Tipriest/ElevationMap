@@ -20,20 +20,19 @@
     <!-- FIXME向里面传入坐标和odom的名字和offset啥的 -->
     <node pkg="elevation_mapping" name="pose_link_pub_node" type="pose_link_pub" output="screen" ns="elspider_air">
         <param name="odom_topic_name"                                 type="string"  value="$(arg odom_topic_name)"/>
-        <param name="base_link2velodyne_lidar_x_trans_offset"        type="double"  value="0.14"/>
+        <param name="base_link2velodyne_lidar_x_trans_offset"        type="double"  value="0.30"/>
         <param name="base_link2velodyne_lidar_y_trans_offset"        type="double"  value="0.0"/>
-        <param name="base_link2velodyne_lidar_z_trans_offset"        type="double"  value="0.0"/>
-        <param name="base_link2velodyne_lidar_pitch_revolute_offset" type="double"  value="0.0"/>
+        <param name="base_link2velodyne_lidar_z_trans_offset"        type="double"  value="0.2"/>
+        <param name="base_link2velodyne_lidar_pitch_revolute_offset" type="double"  value="0.3"/>
         <param name="base_link2velodyne_lidar_roll_revolute_offset"  type="double"  value="0.0"/>
-        <param name="base_link2velodyne_lidar_yaw_revolute_offset"   type="double"  value="0.0"/>
+        <param name="base_link2velodyne_lidar_yaw_revolute_offset"   type="double"  value="1.57"/>
 
-        <param name="odom_link2base_link_x_trans_offset"        type="double"  value="0.0"/>
+        <param name="odom_link2base_link_x_trans_offset"        type="double"  value="-0.36"/>
         <param name="odom_link2base_link_y_trans_offset"        type="double"  value="0.0"/>
-        <param name="odom_link2base_link_z_trans_offset"        type="double"  value="0.0"/>
+        <param name="odom_link2base_link_z_trans_offset"        type="double"  value="0.4"/>
         <param name="odom_link2base_link_pitch_revolute_offset" type="double"  value="0.0"/>
-        <param name="odom_link2base_link_roll_revolute_offset"  type="double"  value="0.0"/>
-        <param name="odom_link2base_link_yaw_revolute_offset"   type="double"  value="0.0"/>
-
+        <param name="odom_link2base_link_roll_revolute_offset"  type="double"  value="-3.68"/>
+        <param name="odom_link2base_link_yaw_revolute_offset"   type="double"  value="3.14"/>
     </node>
 
     <!-- FIXME:机体到lidar的外参矩阵, 最好在pose_link_pub_node中进行发布 -->

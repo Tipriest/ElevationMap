@@ -14,7 +14,7 @@ void timerCallback(const ros::TimerEvent& event);
 
 int main(int argc, char** argv) {
   ros::init(argc, argv, "poseLinkPub");
-  ros::NodeHandle nh;
+  ros::NodeHandle nh("~");
 
   std::string odomTopicName;
   ros::param::get("~odom_topic_name", odomTopicName);
@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
   nh.param<double>("odom_link2base_link_pitch_revolute_offset", var2[3], double(0.0));
   nh.param<double>("odom_link2base_link_roll_revolute_offset", var2[4], double(0.0));
   nh.param<double>("odom_link2base_link_yaw_revolute_offset", var2[5], double(0.0));
-  transform.setOrigin(tf::Vector3(var2[0], var2[1], var2[2]));
+  transform2.setOrigin(tf::Vector3(var2[0], var2[1], var2[2]));
   q2.setRPY(var2[3], var2[4], var2[5]);
   transform2.setRotation(q2);
 
