@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /GridMap1
         - /Axes1
         - /Axes2
       Splitter Ratio: 0.49572649598121643
@@ -63,7 +64,7 @@ Visualization Manager:
       Enabled: true
       Grid Cell Decimation: 1
       Grid Line Thickness: 0.10000000149011612
-      Height Layer: elevation
+      Height Layer: elevation_inpainted
       Height Transformer: GridMapLayer
       History Length: 1
       Invert ColorMap: false
@@ -73,7 +74,7 @@ Visualization Manager:
       Min Intensity: 0
       Name: GridMap
       Show Grid Lines: true
-      Topic: /elevation_mapping/elevation_map
+      Topic: /elevation_mapping/elevation_map_raw
       Unreliable: false
       Use ColorMap: true
       Value: true
@@ -219,9 +220,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.1097964197397232
+      Pitch: 0.589796245098114
       Target Frame: <Fixed Frame>
-      Yaw: 3.533587694168091
+      Yaw: 1.765402913093567
     Saved: ~
 Window Geometry:
   Displays:
