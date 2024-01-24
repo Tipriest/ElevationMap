@@ -1,6 +1,6 @@
 <launch>
     <arg name="sim" value="false"/>
-    <arg name="gui" value="false"/>
+    <arg name="gui" value="true"/>
 
     <arg name="odom_topic_name" value="torso_odom" if="$(eval sim == true)"/>
     <arg name="odom_topic_name" value="/camera/odom/sample" unless="$(eval sim == true)"/>
@@ -40,7 +40,7 @@
     <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.14 0.0 0.0 0.0 0.0 0.0 /base_link /velodyneLidar 40" /> -->
 
     <!-- rviz-->
-    <group if="$(eval gui == 'true')">
+    <group if="$(eval gui == true)">
         <node name="rviz" pkg="rviz" type="rviz" args="-d $(find elevation_mapping_demos)/rviz/elspider_air_mapping.rviz" required="true"/>
     </group>
     <!-- <node name="kinect_processing_Node" pkg="hitSpider" type="kinect_processing_Node" output="screen"/> -->
