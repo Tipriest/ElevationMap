@@ -37,7 +37,9 @@
     </node>
 
     <!-- FIXME:机体到lidar的外参矩阵, 最好在pose_link_pub_node中进行发布 -->
-    <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.14 0.0 0.0 0.0 0.0 0.0 /base_link /velodyneLidar 40" /> -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="base_link2laser" args="0.14 0.0 0.0 0.0 0.0 0.0 /base_link /velodyneLidar 40" />
+    <node pkg="tf" type="static_transform_publisher" name="odom2base_link" args="0.14 0.0 0.0 0.0 0.0 0.0 /odom /base_link 40" />
+    <node pkg="tf" type="static_transform_publisher" name="world2odom" args="0.14 0.0 0.0 0.0 0.0 0.0 /world /odom 40" /> -->
 
     <!-- rviz-->
     <group if="$(eval gui == true)">
